@@ -5,17 +5,18 @@
 
 Gem::Specification.new do |s|
   s.name = %q{http_accept_language}
-  s.version = "1.0.2"
+  s.version = "1.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Iain Hecker"]
-  s.date = %q{2011-08-05}
+  s.date = %q{2011-09-20}
   s.description = %q{Find out which locale the user preferes by reading the languages they specified in their browser}
   s.email = %q{iain@iain.nl}
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
+    ".gitignore",
      "README.rdoc",
      "Rakefile",
      "VERSION",
