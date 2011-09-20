@@ -55,6 +55,17 @@ module HttpAcceptLanguage
   end
 
 end
+
+# The following lines ensures Rails2 support
+if defined?(ActionController::Request)
+  ActionController::Request.send :include, HttpAcceptLanguage
+elsif defined?(ActionController::AbstractRequest)
+  ActionController::AbstractRequest.send :include, HttpAcceptLanguage
+elsif defined?(ActionController::CgiRequest)
+  ActionController::CgiRequest.send :include, HttpAcceptLanguage
+end
+
+# The following lines ensures Rails3 support
 if defined?(ActionDispatch::Request)
   ActionDispatch::Request.send :include, HttpAcceptLanguage
 elsif defined?(ActionDispatch::AbstractRequest)
